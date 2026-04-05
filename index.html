@@ -31,6 +31,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -69,7 +70,7 @@
     }
 
     .hero h1 {
-      font-size: 36px;
+      font-size: 34px;
       max-width: 700px;
       margin: auto;
     }
@@ -90,7 +91,10 @@
       cursor: pointer;
     }
 
-    /* TRUST */
+    .hero button:hover {
+      background: #f0f0f0;
+    }
+
     .trust {
       margin-top: 30px;
       font-size: 16px;
@@ -108,30 +112,36 @@
       color: #0D2F4F;
     }
 
-    /* SERVICES */
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 30px;
+    /* ABOUT SECTION */
+    .about-intro {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 18px;
     }
 
-    .card {
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .about-item {
       background: white;
       padding: 25px;
       border-radius: 12px;
-      width: 280px;
+      width: 220px;
+      text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
-    /* WHY */
-    .why {
-      background: #EAF4F6;
-      border-radius: 12px;
-      padding: 30px;
-      margin-top: 20px;
-      text-align: left;
+    .about-item h3 {
+      margin-top: 10px;
+      color: #0D2F4F;
+    }
+
+    .icon {
+      font-size: 28px;
     }
 
     /* CONTACT */
@@ -146,6 +156,21 @@
       color: white;
       font-weight: bold;
       text-decoration: none;
+    }
+
+    button {
+      background: white;
+      color: #1F6F78;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #f0f0f0;
     }
 
     /* FOOTER */
@@ -163,13 +188,12 @@
 <header>
   <div class="header-container">
     <div class="logo">
-      <img src="images/IMG_1888.jpeg">
+      <img src="images/IMG_1888.jpeg" alt="logo">
       <h1>Supportive Solutions</h1>
     </div>
 
     <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
+      <a href="#services">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -178,7 +202,7 @@
 <section class="hero">
   <h1>Compassionate ABA Therapy & Support for Children and Families</h1>
   <p>
-    Supporting individuals from early childhood through adulthood with personalized care, patience, and proven strategies.
+    Supporting individuals from early childhood through adulthood with personalized care, patience, and proven strategies—so your loved one can grow with confidence.
   </p>
 
   <button onclick="window.location.href='mailto:portivesolutions@gmail.com'">
@@ -191,40 +215,38 @@
 </section>
 
 <section id="services">
-  <h2>Our Services</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>ABA Therapy</h3>
-      <p>Evidence-based strategies to build communication, behavior, and social skills.</p>
-    </div>
-
-    <div class="card">
-      <h3>Respite Care</h3>
-      <p>Reliable support to give families rest while ensuring safe, compassionate care.</p>
-    </div>
-
-    <div class="card">
-      <h3>Daily Living Skills</h3>
-      <p>Helping individuals gain independence and confidence in everyday life.</p>
-    </div>
-  </div>
-</section>
-
-<section id="about">
   <h2>About Us</h2>
 
-  <div class="why">
-    <p>
-      At Supportive Solutions, we are committed to providing personalized, compassionate care for individuals and families. We understand the importance of trust when it comes to your loved ones, and we prioritize safety, patience, and meaningful progress.
-    </p>
+  <p class="about-intro">
+    At Supportive Solutions, we provide compassionate ABA therapy and support services to individuals with autism and other developmental or physical disabilities. Our approach is personalized, focusing on building meaningful skills, independence, and confidence in everyday life.
+  </p>
 
-    <ul>
-      <li>✔ Experienced with a wide range of needs and ages</li>
-      <li>✔ Patient, compassionate, and dependable</li>
-      <li>✔ Focus on real-life skills and independence</li>
-      <li>✔ Strong communication with families</li>
-    </ul>
+  <div class="about-grid">
+
+    <div class="about-item">
+      <div class="icon">🧠</div>
+      <h3>Experienced Care</h3>
+      <p>Over 3 years of hands-on experience supporting individuals from age 2 through adulthood.</p>
+    </div>
+
+    <div class="about-item">
+      <div class="icon">❤️</div>
+      <h3>Compassionate Approach</h3>
+      <p>Patient, understanding, and respectful care tailored to each individual’s needs.</p>
+    </div>
+
+    <div class="about-item">
+      <div class="icon">📈</div>
+      <h3>Skill Development</h3>
+      <p>Focused on building social, communication, and daily living skills for real-life success.</p>
+    </div>
+
+    <div class="about-item">
+      <div class="icon">🏡</div>
+      <h3>Family Support</h3>
+      <p>Providing reliable respite services to support families and reduce caregiver fatigue.</p>
+    </div>
+
   </div>
 </section>
 
