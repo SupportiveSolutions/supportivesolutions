@@ -41,7 +41,7 @@
     }
 
     .logo img {
-      width: 60px;
+      width: 70px;
     }
 
     .logo h1 {
@@ -81,18 +81,22 @@
       max-width: 600px;
     }
 
-    .hero button {
+    button {
       background: white;
       color: #1F6F78;
-      padding: 14px 25px;
+      padding: 14px 28px;
       border: none;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 30px;
       cursor: pointer;
+      font-weight: 600;
+      margin-top: 20px;
+      font-size: 16px;
+      transition: all 0.2s ease;
     }
 
-    .hero button:hover {
+    button:hover {
       background: #f0f0f0;
+      transform: scale(1.05);
     }
 
     .trust {
@@ -102,7 +106,7 @@
 
     /* SECTIONS */
     section {
-      padding: 70px 20px;
+      padding: 90px 20px;
       max-width: 1000px;
       margin: auto;
       text-align: center;
@@ -110,9 +114,30 @@
 
     h2 {
       color: #0D2F4F;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
     }
 
-    /* ABOUT SECTION */
+    h2::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #2CA6A4;
+      margin: 10px auto 0;
+    }
+
+    /* SOFT SECTION */
+    .soft-section {
+      background-color: #EAF4F6;
+      border-radius: 12px;
+      padding: 40px 20px;
+      margin-top: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    /* ABOUT */
     .about-intro {
       max-width: 700px;
       margin: 0 auto 40px;
@@ -133,6 +158,12 @@
       width: 220px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .about-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
     .about-item h3 {
@@ -141,7 +172,8 @@
     }
 
     .icon {
-      font-size: 28px;
+      font-size: 34px;
+      margin-bottom: 10px;
     }
 
     /* CONTACT */
@@ -156,21 +188,6 @@
       color: white;
       font-weight: bold;
       text-decoration: none;
-    }
-
-    button {
-      background: white;
-      color: #1F6F78;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-
-    button:hover {
-      background: #f0f0f0;
     }
 
     /* FOOTER */
@@ -210,43 +227,45 @@
   </button>
 
   <div class="trust">
-    ✔ 7+ years supporting individuals with special needs &nbsp; ✔ Ages 2–20+ &nbsp; ✔ ABA-based care
+    ✔ 7+ years supporting individuals with special needs &nbsp; ✔ Ages 2–adult &nbsp; ✔ ABA-based care
   </div>
 </section>
 
 <section id="services">
-  <h2>About Us</h2>
+  <div class="soft-section">
+    <h2>About Us</h2>
 
-  <p class="about-intro">
-    At Supportive Solutions, we provide compassionate ABA therapy and support services to individuals with autism and other developmental or physical disabilities. Our approach is personalized, focusing on building meaningful skills, independence, and confidence in everyday life.
-  </p>
+    <p class="about-intro">
+      At Supportive Solutions, we provide compassionate ABA therapy and support services to individuals with autism and other developmental or physical disabilities. Our approach is personalized, focusing on building meaningful skills, independence, and confidence in everyday life.
+    </p>
 
-  <div class="about-grid">
+    <div class="about-grid">
 
-    <div class="about-item">
-      <div class="icon">🧠</div>
-      <h3>Experienced Care</h3>
-      <p>Over 3 years of hands-on experience supporting individuals from age 2 through adulthood.</p>
+      <div class="about-item">
+        <div class="icon">🧠</div>
+        <h3>Experienced Care</h3>
+        <p>Over 7 years supporting individuals with special needs, including 3 years specializing in ABA therapy.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="icon">❤️</div>
+        <h3>Compassionate Approach</h3>
+        <p>Patient, understanding, and respectful care tailored to each individual’s needs.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="icon">📈</div>
+        <h3>Skill Development</h3>
+        <p>Focused on building social, communication, and daily living skills for real-life success.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="icon">🏡</div>
+        <h3>Family Support</h3>
+        <p>Providing reliable respite services to support families and reduce caregiver fatigue.</p>
+      </div>
+
     </div>
-
-    <div class="about-item">
-      <div class="icon">❤️</div>
-      <h3>Compassionate Approach</h3>
-      <p>Patient, understanding, and respectful care tailored to each individual’s needs.</p>
-    </div>
-
-    <div class="about-item">
-      <div class="icon">📈</div>
-      <h3>Skill Development</h3>
-      <p>Focused on building social, communication, and daily living skills for real-life success.</p>
-    </div>
-
-    <div class="about-item">
-      <div class="icon">🏡</div>
-      <h3>Family Support</h3>
-      <p>Providing reliable respite services to support families and reduce caregiver fatigue.</p>
-    </div>
-
   </div>
 </section>
 
