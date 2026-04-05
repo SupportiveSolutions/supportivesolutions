@@ -24,24 +24,31 @@
     header {
       background: linear-gradient(135deg, #2CA6A4, #1F6F78);
       color: white;
-      padding: 60px 20px;
-      text-align: center;
+      padding: 40px 20px;
     }
 
-    header img {
-  width: 150px;
-  max-width: 80%;
-  height: auto;
-  margin-bottom: 15px;
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      text-align: left;
     }
 
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+    .header-container img {
+      width: 90px;
+      height: auto;
     }
 
-    header p {
-      font-size: 18px;
+    .header-text h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .header-text p {
+      margin: 5px 0 0;
+      font-size: 16px;
       opacity: 0.95;
     }
 
@@ -133,11 +140,14 @@
 <body>
 
 <header>
-  <!-- Make sure your logo is in /images/logo.jpg -->
-  <img src="images/logo.jpg" alt="Supportive Solutions Logo">
+  <div class="header-container">
+    <img src="images/IMG_1888.jpeg" alt="Supportive Solutions Logo">
 
-  <h1>Supportive Solutions</h1>
-  <p>Compassionate Support for Families Across the GTA</p>
+    <div class="header-text">
+      <h1>Supportive Solutions</h1>
+      <p>Compassionate Support for Families Across the GTA</p>
+    </div>
+  </div>
 </header>
 
 <nav>
