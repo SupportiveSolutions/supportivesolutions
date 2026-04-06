@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ABA Therapy | Supportive Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #F4F8F9;
+      color: #333;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    header.scrolled {
+      padding: 10px 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 70px;
+    }
+
+    .logo h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #0D2F4F;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #0D2F4F;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: #2CA6A4;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2CA6A4, #1F6F78);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    button {
+      background: #2CA6A4;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #1F6F78;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      scroll-margin-top: 100px;
+    }
+
+    h2 {
+      color: #0D2F4F;
+      margin-bottom: 20px;
+    }
+
+    .soft-section {
+      background-color: #EAF4F6;
+      border-radius: 12px;
+      padding: 40px 20px;
+      margin-top: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .about-item {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .content-text {
+      max-width: 750px;
+      margin: 20px auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #0D2F4F;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="IMG_1888.jpeg" alt="Logo">
+      <h1>Supportive Solutions</h1>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#team">Meet the Team</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Applied Behavior Analysis (ABA) Therapy</h1>
+  <p>
+    Evidence-based support designed to build meaningful skills and improve everyday life.
+  </p>
+
+  <button onclick="window.location.href='mailto:portivesolutions@gmail.com'">
+    Book a Free Consultation
+  </button>
+</section>
+
+<section>
+  <div class="soft-section">
+
+    <h2>What is ABA?</h2>
+
+    <p class="content-text">
+      Applied Behavior Analysis (ABA) is a scientifically supported approach that focuses on understanding behavior and how it is influenced by the environment.
+    </p>
+
+    <h2>Our ABA Services</h2>
+
+    <p class="content-text">
+      Our services are based on the principles of Applied Behavior Analysis (ABA), an evidence-based approach recognized under the Ontario Autism Program (OAP).
+    </p>
+
+    <p class="content-text">
+      Programs are individualized based on each person’s strengths, needs, and goals, and implemented using proven ABA strategies.
+    </p>
+
+    <h2>How ABA Therapy Works</h2>
+
+    <div class="about-grid">
+
+      <div class="about-item">
+        <div class="icon">🔍</div>
+        <h3>Assessment</h3>
+        <p>Identify strengths and needs.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="icon">📝</div>
+        <h3>Goal Setting</h3>
+        <p>Create personalized goals.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="icon">🎯</div>
+        <h3>Skill Building</h3>
+        <p>Teach meaningful skills.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="icon">📊</div>
+        <h3>Progress Tracking</h3>
+        <p>Monitor growth over time.</p>
+      </div>
+
+    </div>
+
+    <h2>What ABA Therapy Can Help With</h2>
+
+    <p class="content-text">
+      • Communication & language development <br>
+      • Social skills <br>
+      • Daily living skills <br>
+      • Emotional regulation <br>
+      • Reducing challenging behaviors <br>
+      • Building independence
+    </p>
+
+    <p class="content-text" style="font-size:16px; opacity:0.9;">
+      Families may be able to use Ontario Autism Program (OAP) funding depending on eligibility.
+    </p>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Supportive Solutions</p>
+</footer>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
+</body>
+</html>
