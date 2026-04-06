@@ -2,157 +2,216 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BrightPath ABA Therapy</title>
+  <title>Supportive Solutions ABA Therapy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
       margin: 0;
-      line-height: 1.6;
-      color: #333;
+      color: #1a365d;
+      background: linear-gradient(135deg, #2fa4a9, #6ec1c6);
     }
+
     header {
-      background: #2a7fba;
-      color: white;
-      padding: 20px;
       text-align: center;
+      padding: 40px 20px;
+      color: white;
     }
+
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      opacity: 0.9;
+    }
+
     nav {
       display: flex;
       justify-content: center;
-      background: #1f5f8b;
-      padding: 10px;
+      gap: 25px;
+      padding: 15px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
     }
+
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      cursor: pointer;
     }
-    .hero {
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .tab-content {
+      display: none;
       padding: 60px 20px;
-      text-align: center;
-      background: #f4f8fb;
     }
-    .hero h1 {
-      font-size: 2.5em;
+
+    .active {
+      display: block;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 25px;
-      background: #ff7a59;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .section {
-      padding: 50px 20px;
+
+    .container {
       max-width: 1000px;
       margin: auto;
     }
+
+    .hero {
+      text-align: center;
+      color: white;
+      padding: 80px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 2.7em;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: #1a365d;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      margin-top: 25px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
     .steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
     }
-    .card {
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 8px;
+
+    .card h3 {
+      margin-top: 0;
+      color: #2fa4a9;
     }
-    .testimonials {
-      background: #eef6fb;
-      padding: 40px;
+
+    .section-title {
       text-align: center;
-    }
-    footer {
-      background: #1f5f8b;
       color: white;
+      margin-bottom: 20px;
+    }
+
+    footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px;
+      color: white;
+      opacity: 0.8;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>BrightPath ABA Therapy</h1>
-  <p>Helping children build communication, independence, and confidence</p>
+  <!-- You can replace this with your actual logo image -->
+  <h1>SUPPORTIVE SOLUTIONS</h1>
+  <p>ABA Therapy Services</p>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#process">How It Works</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
+  <a onclick="showTab('home')">Home</a>
+  <a onclick="showTab('aba')">How ABA Works</a>
+  <a onclick="showTab('services')">Services</a>
+  <a onclick="showTab('contact')">Contact</a>
 </nav>
 
-<section class="hero">
-  <h1>ABA Therapy in Ontario — Personalized for Your Child</h1>
-  <p>We provide 1:1 in-home and clinic-based ABA therapy for children with autism across the GTA.</p>
-  <a href="#contact" class="btn">Book a Free Consultation</a>
-</section>
+<!-- HOME -->
+<div id="home" class="tab-content active">
+  <div class="hero">
+    <h1>Helping Your Child Thrive</h1>
+    <p>Personalized ABA therapy across Ontario focused on communication, independence, and confidence.</p>
+    <a onclick="showTab('contact')" class="btn">Book a Free Consultation</a>
+  </div>
 
-<section class="section" id="about">
-  <h2>What We Do</h2>
-  <p>
-    We help children develop communication, social, and daily living skills using Applied Behaviour Analysis (ABA).
-    Our therapists work one-on-one with your child through structured play and real-life activities.
-  </p>
-</section>
-
-<section class="section" id="process">
-  <h2>How ABA Therapy Works</h2>
-  <div class="steps">
+  <div class="container">
     <div class="card">
-      <h3>1. Assessment</h3>
-      <p>We meet your child and identify strengths, challenges, and goals.</p>
-    </div>
-    <div class="card">
-      <h3>2. Personalized Plan</h3>
-      <p>A Board Certified Behaviour Analyst (BCBA) designs a custom program.</p>
-    </div>
-    <div class="card">
-      <h3>3. 1:1 Therapy</h3>
-      <p>Your child works with a therapist using play-based and structured teaching.</p>
-    </div>
-    <div class="card">
-      <h3>4. Progress Tracking</h3>
-      <p>We collect data every session and adjust goals regularly.</p>
-    </div>
-    <div class="card">
-      <h3>5. Parent Coaching</h3>
-      <p>We teach you strategies so progress continues at home.</p>
+      <h2>What We Do</h2>
+      <p>
+        We provide one-on-one ABA therapy using structured teaching and play-based learning 
+        to help children build essential life skills.
+      </p>
     </div>
   </div>
-</section>
+</div>
 
-<section class="section" id="services">
-  <h2>Our Services</h2>
-  <ul>
-    <li>In-home ABA therapy</li>
-    <li>Centre-based programs</li>
-    <li>Social skills groups</li>
-    <li>Parent training & coaching</li>
-  </ul>
-</section>
+<!-- ABA -->
+<div id="aba" class="tab-content">
+  <div class="container">
+    <h2 class="section-title">How ABA Therapy Works</h2>
 
-<section class="testimonials">
-  <h2>What Parents Say</h2>
-  <p>"Our child started communicating within months. The team was incredible."</p>
-  <p>"We finally feel supported and understand how to help our child."</p>
-</section>
+    <div class="steps">
+      <div class="card"><h3>Assessment</h3><p>We understand your child’s strengths and needs.</p></div>
+      <div class="card"><h3>Plan</h3><p>A BCBA creates a personalized program.</p></div>
+      <div class="card"><h3>Therapy</h3><p>1:1 sessions using structured play.</p></div>
+      <div class="card"><h3>Progress</h3><p>Data is tracked every session.</p></div>
+      <div class="card"><h3>Parent Support</h3><p>We coach you to support growth at home.</p></div>
+    </div>
+  </div>
+</div>
 
-<section class="section" id="contact">
-  <h2>Get Started</h2>
-  <p>Book a free consultation to learn how we can support your child.</p>
-  <a href="mailto:info@brightpathaba.com" class="btn">Contact Us</a>
-</section>
+<!-- SERVICES -->
+<div id="services" class="tab-content">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="steps">
+      <div class="card">In-home ABA Therapy</div>
+      <div class="card">Centre-based Programs</div>
+      <div class="card">Social Skills Groups</div>
+      <div class="card">Parent Coaching</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="tab-content">
+  <div class="container">
+    <h2 class="section-title">Get Started</h2>
+
+    <div class="card" style="text-align:center;">
+      <p>Book a free consultation to learn how we can support your child.</p>
+      <a href="mailto:info@supportivesolutions.com" class="btn">Contact Us</a>
+    </div>
+  </div>
+</div>
 
 <footer>
-  <p>© 2026 BrightPath ABA Therapy | Serving Toronto & GTA</p>
+  <p>© 2026 Supportive Solutions | Ontario</p>
 </footer>
+
+<script>
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
 
 </body>
 </html>
