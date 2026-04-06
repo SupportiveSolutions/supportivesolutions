@@ -1,23 +1,345 @@
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #0D2F4F;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 4px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supportive Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: #2CA6A4;
-  transition: width 0.3s ease;
-}
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-nav a:hover::after {
-  width: 100%;
-}
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #F4F8F9;
+      color: #333;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* ✅ Sticky Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    header.scrolled {
+      padding: 10px 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 70px;
+    }
+
+    .logo h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #0D2F4F;
+    }
+
+    /* ✅ Modern Nav Links */
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #0D2F4F;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: #2CA6A4;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2CA6A4, #1F6F78);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    button {
+      background: white;
+      color: #1F6F78;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 20px;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: #f0f0f0;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 90px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      scroll-margin-top: 100px;
+    }
+
+    h2 {
+      color: #0D2F4F;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #2CA6A4;
+      margin: 10px auto 0;
+    }
+
+    .soft-section {
+      background-color: #EAF4F6;
+      border-radius: 12px;
+      padding: 40px 20px;
+      margin-top: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .about-intro {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 18px;
+    }
+
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .about-item {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .team-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .team-card img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .team-role {
+      font-weight: 600;
+      color: #2CA6A4;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #2CA6A4, #1F6F78);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: #0D2F4F;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="IMG_1888.jpeg" alt="Logo">
+      <h1>Supportive Solutions</h1>
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="aba.html">ABA Therapy</a>
+      <a href="#team">Meet the Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Compassionate ABA Therapy & Support for Children and Families</h1>
+  <p>
+    Supporting individuals from early childhood through adulthood with personalized care.
+  </p>
+
+  <button onclick="window.location.href='mailto:portivesolutions@gmail.com'">
+    Book a Free Consultation
+  </button>
+</section>
+
+<!-- ✅ ABOUT / OUR STORY -->
+<section id="about">
+  <div class="soft-section">
+    <h2>About Us</h2>
+
+    <p class="about-intro">
+      At Supportive Solutions, we provide compassionate ABA therapy and support services to individuals with autism and other developmental or physical disabilities.
+    </p>
+
+    <div class="about-grid">
+      <div class="about-item">
+        <div class="icon">🧠</div>
+        <h3>Experienced Care</h3>
+        <p>7+ years supporting individuals with special needs.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="icon">❤️</div>
+        <h3>Compassionate Approach</h3>
+        <p>Patient, respectful, and understanding care.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="icon">📈</div>
+        <h3>Skill Development</h3>
+        <p>Building communication, social, and life skills.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="icon">🏡</div>
+        <h3>Family Support</h3>
+        <p>Reliable respite care for families.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ TEAM -->
+<section id="team">
+  <h2>Meet the Team</h2>
+
+  <div class="team-grid">
+    <div class="team-card">
+      <img src="YOUR_PHOTO.jpeg">
+      <h3>Your Name</h3>
+      <p class="team-role">ABA Therapist & Support Worker</p>
+      <p>7+ years experience supporting individuals with special needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="contact-box">
+    <p>
+      <a href="mailto:portivesolutions@gmail.com">portivesolutions@gmail.com</a>
+    </p>
+
+    <button onclick="window.location.href='mailto:portivesolutions@gmail.com'">
+      Send Email
+    </button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Supportive Solutions</p>
+</footer>
+
+<!-- ✅ Sticky Navbar Script -->
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
+</body>
+</html>
